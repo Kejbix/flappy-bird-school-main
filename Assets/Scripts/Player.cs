@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
     public float strength = 5f;
     public float gravity = -9.81f;
     public float tilt = 5f;
+    [SerializeField]
+    private ParticleSystem particleJump;
 
     private Vector3 direction;
 
@@ -32,7 +34,8 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
             direction = Vector3.up * strength;
         }
 
@@ -44,28 +47,45 @@ public class Player : MonoBehaviour
         Vector3 rotation = transform.eulerAngles;
         rotation.z = direction.y * tilt;
         transform.eulerAngles = rotation;
+
+        JumpParticle();
     }
 
     private void AnimateSprite()
     {
         spriteIndex++;
 
-        if (spriteIndex >= sprites.Length) {
+        if (spriteIndex >= sprites.Length)
+        {
             spriteIndex = 0;
         }
 
-        if (spriteIndex < sprites.Length && spriteIndex >= 0) {
+        if (spriteIndex < sprites.Length && spriteIndex >= 0)
+        {
             spriteRenderer.sprite = sprites[spriteIndex];
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Obstacle")) {
+        if (other.gameObject.CompareTag("Obstacle"))
+        {
             FindObjectOfType<GameManager>().GameOver();
-        } else if (other.gameObject.CompareTag("Scoring")) {
+        }
+        else if (other.gameObject.CompareTag("Scoring"))
+        {
             FindObjectOfType<GameManager>().IncreaseScore();
         }
     }
 
+
+    void JumpParticle()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            particleJump.Play();
+        }
+
+
+    }
 }

@@ -3,6 +3,8 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager instance;
+
     private Player player;
     private Spawner spawner;
 
@@ -11,7 +13,6 @@ public class GameManager : MonoBehaviour
     public GameObject gameOver;
     public float score;
     public float coins;
-    [SerializeField]
     public Text coinsText;
     private bool canPowerUp = true;
     private float BirdSize = 0.5f;
@@ -31,6 +32,8 @@ public class GameManager : MonoBehaviour
 
         player = FindObjectOfType<Player>();
         spawner = FindObjectOfType<Spawner>();
+
+         
 
         Pause();
     }
