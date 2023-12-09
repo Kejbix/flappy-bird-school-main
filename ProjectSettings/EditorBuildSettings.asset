@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Flappy Bird.unity
+    path: Assets/Scenes/menu.unity
+    guid: 3caee92d2fb765c4bbb10b1fc1f02e1f
+  - enabled: 1
+    path: Assets/Scenes/FlappyBird.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/credits.unity
+    guid: 5142835e4f278ff44b495c6e4aa7bb26
   m_configObjects: {}

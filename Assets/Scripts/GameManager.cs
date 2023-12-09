@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
         player = FindObjectOfType<Player>();
         spawner = FindObjectOfType<Spawner>();
 
-         
+
 
         Pause();
     }
@@ -81,12 +81,13 @@ public class GameManager : MonoBehaviour
     }
 
     public void Money()
-    {
-        coins = score / 2;
+    { coins = score / 2;
+
         coinsText.text = coins.ToString();
 
 
-    }
-}
 
+        }
+
+}
 
