@@ -7,13 +7,13 @@ using UnityEngine.SceneManagement;
 public class UIMainmenu : MonoBehaviour
 {
     [SerializeField] private string play;
-    [SerializeField] private string shop;
+    [SerializeField] private string settings;
     [SerializeField] private string credits;
     [SerializeField] private string menu;
 
-    public void Shopopen()
+    public void Settingsopen()
     {
-        SceneManager.LoadSceneAsync(shop);
+        SceneManager.LoadSceneAsync(settings);
     }
     public void Menuopen()
     {

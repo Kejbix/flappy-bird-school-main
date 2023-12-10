@@ -11,12 +11,15 @@ public class Player : MonoBehaviour
     public float tilt = 5f;
     [SerializeField]
     private ParticleSystem particleJump;
-
     private Vector3 direction;
+
+
+
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+
     }
 
     private void Start()
@@ -39,11 +42,11 @@ public class Player : MonoBehaviour
             direction = Vector3.up * strength;
         }
 
-        // Apply gravity and update the position
+
         direction.y += gravity * Time.deltaTime;
         transform.position += direction * Time.deltaTime;
 
-        // Tilt the bird based on the direction
+
         Vector3 rotation = transform.eulerAngles;
         rotation.z = direction.y * tilt;
         transform.eulerAngles = rotation;
@@ -76,16 +79,19 @@ public class Player : MonoBehaviour
         {
             FindObjectOfType<GameManager>().IncreaseScore();
         }
+
     }
 
-
-    void JumpParticle()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
+        void JumpParticle()
         {
-            particleJump.Play();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                particleJump.Play();
+            }
+
+
         }
 
-
-    }
+    
 }
+

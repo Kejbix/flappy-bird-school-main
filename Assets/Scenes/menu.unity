@@ -478,7 +478,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2120722992}
         m_TargetAssemblyTypeName: UIMainmenu, Assembly-CSharp
-        m_MethodName: Shopopen
+        m_MethodName: Settingsopen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1598,7 +1598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   play: FlappyBird
-  shop: 
+  settings: settings
   credits: credits
   menu: menu
 --- !u!4 &2120722993
