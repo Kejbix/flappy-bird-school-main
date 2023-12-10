@@ -76,18 +76,10 @@ public class GameManager : MonoBehaviour
         score++;
         scoreText.text = score.ToString();
 
-        if (score % 2 == 0)
-            Money();
+        
+            
     }
 
-    public void Money()
-    { coins = score / 2;
-
-        coinsText.text = coins.ToString();
-
-
-
-        }
-
+    
 }
 
