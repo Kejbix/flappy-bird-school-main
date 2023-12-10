@@ -616,11 +616,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b60da0815f90547a4112c8cf3b30ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canPowerUp: 1
-  BirdSize: 0.5
-  BaseBirdSize: {x: 0, y: 0}
-  anotherScript: {fileID: 0}
-  PowerNeed: 10
 --- !u!114 &527830930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1352,11 +1347,11 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 5
+    type: 0
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.2
     donutRadius: 0.2
     m_Position: {x: 0, y: 0.19, z: 0}
     m_Rotation: {x: 0, y: -0.78, z: -180}
@@ -1498,7 +1493,7 @@ ParticleSystem:
     arc:
       value: 360
       mode: 0
-      spread: 0
+      spread: 1
       speed:
         serializedVersion: 2
         minMaxState: 0
@@ -1668,7 +1663,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 100
+        scalar: 50
         minScalar: 30
         maxCurve:
           serializedVersion: 2
